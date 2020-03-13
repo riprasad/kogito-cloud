@@ -1,16 +1,16 @@
 pipeline{
  agent { label 'myagent'}
  stages{
-  stage('Initializing'){
-     steps{
-     sh """
-        #git checkout $ghprbSourceBranch
-        #echo $sha1
-         ls -l
-         docker rmi -f \$(docker images -q) || date
-   """
-   }
-  }
+//  stage('Initializing'){
+  //   steps{
+   //  sh """
+    //    #git checkout $ghprbSourceBranch
+     //   #echo $sha1
+      //   ls -l
+       //  docker rmi -f \$(docker images -q) || date
+   //"""
+  // }
+  //}
   stage('Update Maven Artifacts'){
    steps{
    sh """
